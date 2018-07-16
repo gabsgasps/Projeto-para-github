@@ -1,0 +1,76 @@
+/*Area Usuario View*/
+.aparece{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*background-color: #25262a;*/
+}
+.viewUsuario{
+	width: 70%;
+	margin: 0 auto;
+	padding: 0 0 .9em 0;
+	margin-top: .4em;
+	box-shadow: 29px 20px 34px 0px #eee;
+	border-radius: 0 0 30px 30px;
+}
+img{
+	border-radius: 100px;
+	min-height: 40%;
+}
+img:hover{
+	cursor: pointer;
+	filter: brightness(.8);
+}
+p{
+	text-align: left;
+	padding: .2em;
+	font-size: 1.2em;
+	border-bottom: 1px solid #eee;
+}
+h5{
+	font-size: 1.2em;
+}
+@media (min-width: 568px){
+	.viewUsuario{
+		width: 50%;
+	}
+
+	img{
+		max-height: 60%;
+	}
+}
+@media (min-width: 768px) {
+
+	 .viewUsuario{
+		width: 40%;
+	}
+
+	img{
+		max-height: 60%;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.viewUsuario{
+		width: 300px;
+		height: auto;
+		border: 2px solid #eee;
+		box-shadow: 29px 20px 34px 0px #eee;
+		border-radius: 0 0 30px 30px;
+	}
+	.viewUsuario:hover{
+		box-shadow: 35px -4px 39px 5px #eee;
+	}
+
+	img{
+		max-height: 50%;
+	}
+	p{
+		text-align: left;
+		padding: .7em;
+		font-size: 1.2em;
+		border-bottom: 1px solid #eee;
+	}
+}

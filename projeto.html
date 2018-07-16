@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>Projeto para o Github</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Gabriel Gasparino Rubia">
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/projeto.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="apresentaErro"></div>
+
+			<form class="form1" onsubmit="usuariosController.busca(event)">
+				<div class="input-group mb-3">
+
+				 	<input type="text" class="form-control inputText" name="q" id="q" placeholder="Digite uma Nome">
+
+				  <div class="input-group-append">
+
+				    <button class="btn btn-outline-secondary busca" type="submit" id="button-addon2" name="busca" value="Buscar">Button</button>
+				  </div>
+				</div>
+			</form>
+
+		<div class="row">
+			<canvas class="line-chart"></canvas>
+		</div>
+		<div class="tabela col-sm"></div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+	<script src="js/view/View.js"></script>
+	<script src="js/models/Mensagem.js"></script>
+	<script src="js/controller/UsuariosController.js"></script>
+	<script src="js/services/BuscaUsuarios.js"></script>
+	<script src="js/view/TabelaUsuarios.js"></script>
+	<script src="js/services/FiltraUsuarios.js"></script>
+	<script src="js/view/AreaUsuarioView.js"></script>
+	<script src="js/view/GraficoView.js"></script>
+	<script src="js/view/ApresentaErroView.js"></script>
+
+	<script type="text/javascript">
+		var usuariosController = new UsuariosController();
+	</script>
+</body>
+</html>
