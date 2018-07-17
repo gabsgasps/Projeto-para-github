@@ -12,7 +12,7 @@ class TabelaUsuarios extends View{
 		for (let i = 0; i <= usuarios.items.length; i++) {
 
 			if (i < 10) html += `
-				<a href="#" class="list-group-item list-group-item-action lista" onclick="usuariosController.linkUsuario('${usuarios.items[i].login}')">
+				<a href="#" target="_blank" class="list-group-item list-group-item-action lista" onclick="usuariosController.linkUsuario('${usuarios.items[i].login}')">
 					${usuarios.items[i].login}
 			  	</a>`
 		}
