@@ -10,9 +10,9 @@ class UsersController{
 
 		this._filterUsers = new FilterUsers();
 
-		this._graficView = new GraficView($(".line-chart"));
+		this._graphicView = new GraphicView($(".line-chart"));
 
-		this._introducedError = new IntroducedErrorView($(".introducedError"));
+		this._introduceError = new IntroduceErrorView($(".introduceError"));
 
 		this._message = new Message();
 	}
@@ -22,56 +22,56 @@ class UsersController{
 		event.preventDefault();
 
 		this._filterUsers
-			.importaUsuarios()
+			.importUsers()
 			.then(response => {
 
 				this._validaCampo(response);
 				
 				this._usersList.update(response);
-		 		this._montaGrafico();
+		 		this._makeGraphic();
 		 		
 		 		this._name.value = '';
 			})
 			.catch(e => console.log(e));
 	}
 
-	_montaGrafico(){
+	_makeGraphic(){
 
 		let users = [];
-		//Usa o textContent das td's para 
-			//fazer requisições das informações 
-				//de cada usuario Individualmente 
-		//Passando-os para a view do gráfico 
+		
 		document.querySelectorAll(".lista")
 			.forEach(usersNames => 
 				this._filterUsers
-					.importaUsuarioIndidual(usersNames.textContent)
+					.importUserIndividual(usersNames.textContent)
 					.then(informationUsers => {
 
 						users.push(informationUsers)
-						this._graficView.update(users)
+						this._graphicView.update(users)
 					})
 					.catch(e => console.log(e))
 			)
 	}
 
-	linkUsuario(users) {
+	linkUsuario(user) {
 
-		sessionStorage.setItem('users', users);
+		sessionStorage.setItem('users', user);
 
 		window.location.href = 'usuarioInterno.html';
 
 	}
 
 	_validaCampo(response) {
+
 		if (response.items.length === 0) {
 
 			this._message.text ='Usuário não existe ou é inválido';
-			this._introducedError.update(this._message);
+			this._introduceError.update(this._message);
 			this._name.value = '';
+			return;
 		}else{
+
 			this._message.text ='';
-			this._introducedError.update(this._message);
+			this._introduceError.update(this._message);
 
 		}
 	}

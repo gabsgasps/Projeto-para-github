@@ -1,0 +1,25 @@
+.form1{
+	
+	@include margins(0, auto);
+
+	@media (min-width: 768px) {
+		width: 80%;
+	}
+	@media (min-width: 992px) {
+		width: 65%;
+	}
+	.busca{
+
+		&:hover{
+			@extend %font-weight-600;
+			cursor: pointer;
+			background-color: $color-pattern;
+		}
+	 	&:active{
+			@extend %font-weight-600;
+			background-color: $color-pattern!important;
+			border-color: $color-pattern!important;
+			box-shadow: 0 0 0 0.2rem transparentize($color-pattern, 0.40)!important;
+		}
+	}//busca
+}//form1

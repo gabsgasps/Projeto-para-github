@@ -1,0 +1,17 @@
+.introduceError{
+	
+	@include margins(.35em, auto);
+	text-align: center;
+	font-size: .98em;
+	@extend %font-weight-600;
+
+	@media (min-width: 768px) {
+		width: 80%; 
+	}
+
+	.alert-info{
+		background-color: $color-pattern;
+		color: $color-secondary;
+	}//alert-info
+	
+}//.introduceError

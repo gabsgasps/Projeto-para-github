@@ -1,4 +1,4 @@
-class GraficView extends View{
+class GraphicView extends View{
 
 	constructor(element) {
 

@@ -1,0 +1,22 @@
+.list{
+	
+	width: 100%;
+	@include margins(0, auto);
+	margin-bottom: .7em;
+
+	@media (min-width: 768px) { 
+		width: 90%;
+		@include margins(0, auto);
+	}
+	
+	a{
+		padding: .3em .9em;
+		@media (min-width: 992px) {
+
+			padding: .75rem 1.8rem;
+			font-size: 1.1em;
+		}
+		
+	}//a
+
+}//.list

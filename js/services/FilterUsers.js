@@ -7,7 +7,7 @@ class FilterUsers{
 		this._name = document.querySelector("#q");//campo do texto
 	}
 
-	importaUsuarios() {
+	importUsers() {
 
 		return new Promise((resolve, reject) =>{
 
@@ -18,13 +18,13 @@ class FilterUsers{
 		});
 	}
 
-	importaUsuarioIndidual(user) {
+	importUserIndividual(user) {
 
 		return new Promise((resolve, reject) =>{
 
 			this._searchUsers
 				.getusuarioIndividual(`https://api.github.com/users/${user}`)
-				.then(dadosUsuario => resolve(dadosUsuario))
+				.then(userData => resolve(userData))
 				.catch(error => reject(console.log('Não foi possível a requisição dos dados individuais do usuário')));
 		});
 	}
