@@ -69,7 +69,6 @@ class UsersController{
 			this._message.text ='Usuário não existe ou é inválido';
 			this._introducedError.update(this._message);
 			this._name.value = '';
-			return;
 		}else{
 			this._message.text ='';
 			this._introducedError.update(this._message);
