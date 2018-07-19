@@ -1,8 +1,8 @@
-class ApresentaErroView extends View{
+class IntroducedErrorView extends View{
 
-	constructor(elemento) {
+	constructor(element) {
 
-		super(elemento);
+		super(element);
 	}
 
 	template(model) {

@@ -1,8 +1,8 @@
 class AreaUsuarioView extends View{
 
-	constructor(elemento) {
+	constructor(element) {
 
-		super(elemento);
+		super(element);
 	}
 
 	template(usuario) {

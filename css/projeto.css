@@ -39,12 +39,12 @@ body{
 	margin: 0 auto;
 	margin-bottom: .7em; 
 }
-.tabela{
+.list{
 	width: 100%;
 	margin: 0 auto;
 	margin-bottom: .7em;	
 }
-.tabela a{
+.list a{
 	padding: .3em .9em;
 }
 
@@ -63,7 +63,7 @@ body{
 		margin: 0 auto!important;
 		border-color: #eee;
 	}
-	.tabela{
+	.list{
 		width: 90%;
 		margin: 0 auto;
 	}
@@ -74,7 +74,7 @@ body{
 	.form1{
 		width: 65%;
 	}
-	.tabela a{
+	.list a{
 		padding: .75rem 1.8rem;
 		font-size: 1.1em;
 	}

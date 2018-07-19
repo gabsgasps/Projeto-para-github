@@ -4,29 +4,22 @@ class UsuarioInternoController{
 
 		let $ = document.querySelector.bind(document);
 		
-		this._filtraUsuarios = new FiltraUsuarios();
+		this._filterUsers = new FilterUsers();
 
 		this._areaUsuario = new AreaUsuarioView($(".aparece"));
 
-		this._usuario = sessionStorage.getItem('usuarios');
+		this._user = sessionStorage.getItem('users');
 
-		this.usuarioInterno(this._usuario);
+		this.usuarioInterno(this._user);
 	}
 
-	usuarioInterno(usuarioLogin) {
+	usuarioInterno(userLogin) {
 
-
-		//let b = sessionStorage.getItem('usuario');
-
-		this._filtraUsuarios
-			.importaUsuarioIndidual(`${usuarioLogin}`)
-			.then(usuario => this._areaUsuario.update(usuario))
-			.catch(e => console.log(e));
-
-		/*if (sessionStorage.length == 1) {
-
-			sessionStorage.clear();
-		}*/
+		this._filterUsers
+			.importaUsuarioIndidual(`${userLogin}`)
+			.then(user => this._areaUsuario.update(user))
+			.catch(error => console.log(error));
+	
 	}
 
 }

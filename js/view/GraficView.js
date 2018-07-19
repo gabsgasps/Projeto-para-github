@@ -1,22 +1,22 @@
-class GraficoView extends View{
+class GraficView extends View{
 
-	constructor(elemento) {
+	constructor(element) {
 
-		super(elemento);
+		super(element);
 
 	}
 
-	template(usuarios) {
+	template(users) {
 		let followers = [];
 		let logins = [];
 
-		usuarios.forEach((usuario) => {
+		users.forEach((user) => {
 
-			followers.push(usuario.followers);
-			logins.push(usuario.login);
+			followers.push(user.followers);
+			logins.push(user.login);
 		});
 		
-		let chartGraph = new Chart(this._elemento, {
+		let chartGraph = new Chart(this._element, {
 			type: 'bar',
 		    data: {
 		    	labels: logins,

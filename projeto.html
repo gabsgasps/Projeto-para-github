@@ -14,16 +14,16 @@
 </head>
 <body>
 	<div class="container">
-		<div class="apresentaErro"></div>
+		<div class="introducedError"></div>
 
-			<form class="form1" onsubmit="usuariosController.busca(event)">
+			<form class="form1" onsubmit="usersController.search(event)">
 				<div class="input-group mb-3">
 
-				 	<input type="text" class="form-control inputText" name="q" id="q" placeholder="Digite uma Nome">
+				 	<input type="text" class="form-control inputText" name="q" id="q" placeholder="Insert a name">
 
 				  <div class="input-group-append">
 
-				    <button class="btn btn-outline-secondary busca" type="submit" id="button-addon2" name="busca">Buscar</button>
+				    <button class="btn btn-outline-secondary busca" type="submit" id="button-addon2" name="busca">Search</button>
 				  </div>
 				</div>
 			</form>
@@ -31,22 +31,22 @@
 		<div class="row">
 			<canvas class="line-chart"></canvas>
 		</div>
-		<div class="tabela col-sm"></div>
+		<div class="list col-sm"></div>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 	<script src="js/view/View.js"></script>
-	<script src="js/models/Mensagem.js"></script>
-	<script src="js/controller/UsuariosController.js"></script>
-	<script src="js/services/BuscaUsuarios.js"></script>
-	<script src="js/view/TabelaUsuarios.js"></script>
-	<script src="js/services/FiltraUsuarios.js"></script>
+	<script src="js/models/Message.js"></script>
+	<script src="js/controller/UsersController.js"></script>
+	<script src="js/services/SearchUsers.js"></script>
+	<script src="js/view/UsersList.js"></script>
+	<script src="js/services/FilterUsers.js"></script>
 	<script src="js/view/AreaUsuarioView.js"></script>
-	<script src="js/view/GraficoView.js"></script>
-	<script src="js/view/ApresentaErroView.js"></script>
+	<script src="js/view/GraficView.js"></script>
+	<script src="js/view/IntroducedErrorView.js"></script>
 
 	<script type="text/javascript">
-		var usuariosController = new UsuariosController();
+		var usersController = new UsersController();
 	</script>
 </body>
 </html>

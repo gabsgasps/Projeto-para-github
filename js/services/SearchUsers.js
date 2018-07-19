@@ -1,13 +1,13 @@
-class BuscaUsuarios{
+class SearchUsers{
 
 	
-	get(valorCampo){
+	get(valueCamp){
 
 		return new Promise((resolve,reject) =>{
 
 			let xhr = new XMLHttpRequest();
 
-			xhr.open('GET', `https://api.github.com/search/users?q=${valorCampo}`);
+			xhr.open('GET', `https://api.github.com/search/users?q=${valueCamp}`);
 
 
 
