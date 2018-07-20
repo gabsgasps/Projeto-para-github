@@ -1,0 +1,13 @@
+//lists////////////
+$media-queries: ('min-width: 768px', 'min-width: 992px');
+
+//placeholders///////////
+%font-weight-600{
+	font-weight: 600;
+}
+%display-flex{
+	display: -webkit-box;      
+ 	display: -moz-box;  
+  	display: flex; 
+}
+

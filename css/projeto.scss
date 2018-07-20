@@ -1,8 +1,17 @@
 @charset 'utf-8';
 
+//import of the bootstrap
+@import "scss/bootstrap";
+
+//reset
 @import "helpers/reset";
-//declaração de variaveis
-@import "helpers/var-mixins-placeholder";
+
+//helpers
+@import "helpers/other";
+@import "helpers/mixins";
+@import "helpers/variables";
+
+//layouts
 @import "layout/introduceError";
 @import "layout/form";
 @import "layout/graphic";

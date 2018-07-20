@@ -2,10 +2,10 @@
 	
 	@include margins(0, auto);
 
-	@media (min-width: 768px) {
+	@media (nth($media-queries, 1)) {
 		width: 80%;
 	}
-	@media (min-width: 992px) {
+	@media (nth($media-queries, 2)) {
 		width: 65%;
 	}
 	.busca{
@@ -19,7 +19,7 @@
 			@extend %font-weight-600;
 			background-color: $color-pattern!important;
 			border-color: $color-pattern!important;
-			box-shadow: 0 0 0 0.2rem transparentize($color-pattern, 0.40)!important;
+			@include prefixos(box-shadow, 0 0 0 0.2rem transparentize($color-pattern, 0.40)!important)
 		}
 	}//busca
 }//form1

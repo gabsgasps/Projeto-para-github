@@ -5,7 +5,7 @@
 	font-size: .98em;
 	@extend %font-weight-600;
 
-	@media (min-width: 768px) {
+	@media (nth($media-queries, 1)) {
 		width: 80%; 
 	}
 
