@@ -42,7 +42,7 @@ p{
 	text-align: left;
 	padding: .2em;
 	font-size: 1.2em;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid $color-secondary;
 }
 h5{
 	font-size: 1.2em;
@@ -67,10 +67,10 @@ h5{
 		height: auto;
 		border: 2px solid #eee;
 		@include prefixos(border-radius, 0 0 30px 30px);
-		@include prefixos(box-shadow, 29px 20px 34px 0px #eee);
+		@include prefixos(box-shadow, 29px 20px 34px 0px $color-secondary);
 	}
 	.viewUsuario:hover{
-		@include prefixos(box-shadow, 14px -4px 34px 5px #eee);
+		@include prefixos(box-shadow, 14px -4px 34px 5px $color-secondary);
 	}
 
 	img{
@@ -80,6 +80,6 @@ h5{
 		text-align: left;
 		padding: .7em;
 		font-size: 1.2em;
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid $color-secondary;
 	}
 }

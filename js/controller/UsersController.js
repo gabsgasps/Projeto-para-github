@@ -25,14 +25,27 @@ class UsersController{
 			.importUsers()
 			.then(response => {
 
-				this._validaCampo(response);
-				
+				if(response.items.length === 0){
+
+					this._message.text = ' Usuário não existe ou é inválido';
+					this._introduceError.update(this._message);
+					return;
+				}else {	
+					this._message.text = '';
+					this._introduceError.update(this._message);	
+				}
+
 				this._usersList.update(response);
 		 		this._makeGraphic();
 		 		
 		 		this._name.value = '';
 			})
-			.catch(e => console.log(e));
+			.catch(error => {
+
+				this._message.text = error;
+				this._introduceError.update(this._message);
+
+			});
 	}
 
 	_makeGraphic(){
@@ -48,32 +61,19 @@ class UsersController{
 						users.push(informationUsers)
 						this._graphicView.update(users)
 					})
-					.catch(e => console.log(e))
-			)
+					.catch(error => {
+						this._message.text = error;
+						this._introduceError.update(this._message);
+					})
+			);
 	}
 
-	linkUsuario(user) {
+	linkUser(user) {
 
 		sessionStorage.setItem('users', user);
 
 		window.location.href = 'usuarioInterno.html';
 
-	}
-
-	_validaCampo(response) {
-
-		if (response.items.length === 0) {
-
-			this._message.text ='Usuário não existe ou é inválido';
-			this._introduceError.update(this._message);
-			this._name.value = '';
-			return;
-		}else{
-
-			this._message.text ='';
-			this._introduceError.update(this._message);
-
-		}
 	}
 
 }

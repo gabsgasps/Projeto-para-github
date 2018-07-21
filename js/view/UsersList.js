@@ -11,7 +11,7 @@ class UsersList extends View{
 		for (let i = 0; i <= users.items.length; i++) {
 
 			if (i < 10) html += `
-				<a href="#" target="_blank" class="list-group-item list-group-item-action lista" onclick="usersController.linkUsuario('${users.items[i].login}')">
+				<a href="#" target="_blank" class="list-group-item list-group-item-action lista" onclick="usersController.linkUser('${users.items[i].login}')">
 					${users.items[i].login}
 			  	</a>`
 		}

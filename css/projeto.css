@@ -6789,12 +6789,15 @@ body {
   font-weight: 600; }
 
 .introduceError {
-  margin: 0.35em auto;
+  margin: .35em auto;
   text-align: center;
   font-size: .98em; }
   @media (min-width: 768px) {
     .introduceError {
       width: 80%; } }
+  @media (min-width: 992px) {
+    .introduceError {
+      width: 65%; } }
   .introduceError .alert-info {
     background-color: #25262a;
     color: #eee; }

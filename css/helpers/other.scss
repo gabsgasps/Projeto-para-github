@@ -6,8 +6,9 @@ $media-queries: ('min-width: 768px', 'min-width: 992px');
 	font-weight: 600;
 }
 %display-flex{
-	display: -webkit-box;      
- 	display: -moz-box;  
-  	display: flex; 
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
-

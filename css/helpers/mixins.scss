@@ -1,8 +1,4 @@
-//mixins//////////
-@mixin margins($top-bottom, $right-left){
-	margin: $top-bottom $right-left;
-}
-
+//mixins///////
 @mixin prefixos($propertie, $value){
 	-moz-#{$propertie}: $value;
 	-webkit-#{$propertie}: $value;

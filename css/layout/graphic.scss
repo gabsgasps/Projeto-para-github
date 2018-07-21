@@ -2,7 +2,7 @@
 
 	width: 95%!important;
 	height: auto!important;
-	@include margins(0, auto);
+	margin: 0 auto;
 	margin-bottom: .7em;
 
 	@media (nth($media-queries, 1)) {

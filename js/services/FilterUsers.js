@@ -13,8 +13,12 @@ class FilterUsers{
 
 			this._searchUsers
 				.get(this._name.value)
-				.then(pointer => resolve(pointer))
-				.catch(error => reject(console.log('Não foi possivel fazer a requisição dos dados')));
+				.then(pointer => {
+					resolve(pointer);
+				})
+				.catch(error => {
+					throw new Error(reject('Não foi possivel fazer a requisição dos dados'))
+				});
 		});
 	}
 
@@ -25,7 +29,9 @@ class FilterUsers{
 			this._searchUsers
 				.getusuarioIndividual(`https://api.github.com/users/${user}`)
 				.then(userData => resolve(userData))
-				.catch(error => reject(console.log('Não foi possível a requisição dos dados individuais do usuário')));
+				.catch(error =>{
+					throw new Error(reject('Não foi possível a requisição dos dados individuais do usuário'))
+				});
 		});
 	}
 

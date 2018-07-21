@@ -1,7 +1,6 @@
 .form1{
 	
-	@include margins(0, auto);
-
+	margin: 0 auto;
 	@media (nth($media-queries, 1)) {
 		width: 80%;
 	}

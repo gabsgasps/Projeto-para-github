@@ -1,6 +1,6 @@
 .introduceError{
 	
-	@include margins(.35em, auto);
+	margin: .35em auto;
 	text-align: center;
 	font-size: .98em;
 	@extend %font-weight-600;
@@ -8,7 +8,9 @@
 	@media (nth($media-queries, 1)) {
 		width: 80%; 
 	}
-
+	@media (nth($media-queries, 2)) {
+		width: 65%; 
+	}
 	.alert-info{
 		background-color: $color-pattern;
 		color: $color-secondary;
