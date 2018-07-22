@@ -13,9 +13,7 @@ class FilterUsers{
 
 			this._searchUsers
 				.get(this._name.value)
-				.then(pointer => {
-					resolve(pointer);
-				})
+				.then(pointer => resolve(pointer))
 				.catch(error => {
 					throw new Error(reject('Não foi possivel fazer a requisição dos dados'))
 				});

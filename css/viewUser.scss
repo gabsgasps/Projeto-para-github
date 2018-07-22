@@ -1,3 +1,5 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 @import "helpers/reset";
 @import "helpers/other";
 @import "helpers/variables";
@@ -18,7 +20,7 @@
 	margin-top: .4em;
 	@include prefixos(box-shadow, 29px 20px 34px 0px $color-secondary);
 
-	@media (min-width: 568px){
+	@media (nth($media-queries, 1)){
 		width: 70%;
 	}
 
@@ -28,7 +30,7 @@ img{
 	@include prefixos(border-radius, 100px);
 	min-height: 40%;
 
-	@media (min-width: 568px){
+	@media (nth($media-queries, 1)){
 		max-height: 60%;
 	}
 
@@ -49,7 +51,7 @@ h5{
 }
 	
 
-@media (nth($media-queries, 1)) {
+@media (nth($media-queries, 2)) {
 
 	 .viewUsuario{
 		width: 50%;
@@ -60,7 +62,7 @@ h5{
 	}
 }
 
-@media (nth($media-queries, 2)) {
+@media (nth($media-queries, 3)) {
 
 	.viewUsuario{
 		width: 350px;

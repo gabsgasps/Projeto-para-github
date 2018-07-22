@@ -5,10 +5,10 @@
 	font-size: .98em;
 	@extend %font-weight-600;
 
-	@media (nth($media-queries, 1)) {
+	@media (nth($media-queries, 2)) {
 		width: 80%; 
 	}
-	@media (nth($media-queries, 2)) {
+	@media (nth($media-queries, 3)) {
 		width: 65%; 
 	}
 	.alert-info{

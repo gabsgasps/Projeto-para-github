@@ -4,14 +4,14 @@
 	margin: 0 auto;
 	margin-bottom: .7em;
 
-	@media (nth($media-queries, 1)) { 
+	@media (nth($media-queries, 2)) { 
 		width: 90%;
 		margin: 0 auto;
 	}
 	
 	a{
 		padding: .3em .9em;
-		@media (nth($media-queries, 2)) {
+		@media (nth($media-queries, 3)) {
 
 			padding: .75rem 1.8rem;
 			font-size: 1.1em;

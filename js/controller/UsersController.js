@@ -20,7 +20,6 @@ class UsersController{
 	search(event){
 
 		event.preventDefault();
-
 		this._filterUsers
 			.importUsers()
 			.then(response => {
@@ -30,7 +29,7 @@ class UsersController{
 					this._message.text = ' Usuário não existe ou é inválido';
 					this._introduceError.update(this._message);
 					return;
-				}else {	
+				}else{	
 					this._message.text = '';
 					this._introduceError.update(this._message);	
 				}
@@ -72,7 +71,7 @@ class UsersController{
 
 		sessionStorage.setItem('users', user);
 
-		window.location.href = 'usuarioInterno.html';
+		window.location.href = `internUser.html?${user}`;
 
 	}
 
