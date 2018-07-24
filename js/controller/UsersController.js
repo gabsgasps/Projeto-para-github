@@ -71,7 +71,7 @@ class UsersController{
 
 		sessionStorage.setItem('users', user);
 
-		window.location.href = `internUser.html?${user}`;
+		window.location.href = `internUser.html?user=${user}`;
 
 	}
 

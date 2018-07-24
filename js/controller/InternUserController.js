@@ -19,7 +19,6 @@ class InternUserController{
 			.importUserIndividual(`${userLogin}`)
 			.then(user => this._userArea.update(user))
 			.catch(error => console.log(error));
-	
 	}
 
 }

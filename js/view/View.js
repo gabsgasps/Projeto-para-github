@@ -5,12 +5,12 @@ class View{
 		this._element = element;
 	}
 
-	template(b) {
+	template(model) {
 
 		throw new Error('Necessário a cria do método template');
 	}
-	update(b) {
+	update(model) {
 
-		this._element.innerHTML = this.template(b);
+		this._element.innerHTML = this.template(model);
 	}
 }
