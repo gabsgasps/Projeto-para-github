@@ -4,7 +4,7 @@ class UsersController{
 
 		let $ = document.querySelector.bind(document);
 
-		this._name = document.querySelector("#q");
+		this._name = $("#q");
 
 		this._usersList = new UsersList($(".list"));
 
@@ -15,6 +15,8 @@ class UsersController{
 		this._introduceError = new IntroduceErrorView($(".introduceError"));
 
 		this._message = new Message();
+ 
+
 	}
 
 	search(event){
@@ -38,6 +40,8 @@ class UsersController{
 		 		this._makeGraphic();
 		 		
 		 		this._name.value = '';
+
+				
 			})
 			.catch(error => {
 
@@ -45,13 +49,15 @@ class UsersController{
 				this._introduceError.update(this._message);
 
 			});
+
 	}
 
 	_makeGraphic(){
 
+		this._list = document.querySelectorAll(".lista");
 		let users = [];
-		
-		document.querySelectorAll(".lista")
+
+		this._list
 			.forEach(usersNames => 
 				this._filterUsers
 					.importUserIndividual(usersNames.textContent)
@@ -70,7 +76,6 @@ class UsersController{
 	linkUser(user) {
 
 		sessionStorage.setItem('users', user);
-
 		window.location.href = `internUser.html?user=${user}`;
 
 	}

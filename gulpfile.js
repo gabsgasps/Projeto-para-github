@@ -1,19 +1,21 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
+const pump = require('pump');
 
 //tasks sass
 gulp.task('sass', function(){
 
     gulp.src('scss/projeto.scss')
     	.pipe(sass({outputStyle:'compressed'})).on('error', sass.logError)
-        .pipe(gulp.dest('css/projeto.css'))
+        .pipe(gulp.dest('css'))
 
     gulp.src('scss/viewUser.scss')
     	.pipe(sass({outputStyle:'compressed'})).on('error', sass.logError)
-        .pipe(gulp.dest('css/viewUser.css'))
+        .pipe(gulp.dest('css'))
 });
 
-//watch the sass
+//watch changes in the sass
 gulp.task('watch', function(){
 	gulp.watch('scss/**/*.scss', ['sass']);
 });
