@@ -1,7 +1,6 @@
 class GraphicView extends View{
 
 	constructor(element) {
-
 		super(element);
 
 	}

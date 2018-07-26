@@ -8,7 +8,7 @@ class UserAreaView extends View{
 	template(user) {
 		
 		return `
-		 	<div class="viewUsuario card">
+		 	<div class="userArea card">
 		    	<img class="card-img-top" src="https://avatars2.githubusercontent.com/u/${user.id}?v=4" alt="Card image cap">
 		    	<div class="card-body">
 		     		<h5 class="card-title">

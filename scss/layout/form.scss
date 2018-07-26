@@ -7,7 +7,7 @@
 	@media (nth($media-queries, 3)) {
 		width: 65%;
 	}
-	.busca{
+	.search{
 
 		&:hover{
 			@extend %font-weight-600;
@@ -18,7 +18,7 @@
 			@extend %font-weight-600;
 			background-color: $color-pattern!important;
 			border-color: $color-pattern!important;
-			@include prefixos(box-shadow, 0 0 0 0.2rem transparentize($color-pattern, 0.40)!important)
+			@include prefixers(box-shadow, 0 0 0 0.2rem transparentize($color-pattern, 0.40)!important)
 		}
-	}//busca
+	}//search
 }//form1

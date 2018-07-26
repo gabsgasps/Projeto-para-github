@@ -6,7 +6,7 @@ class InternUserController{
 		
 		this._filterUsers = new FilterUsers();
 
-		this._userArea = new UserAreaView($(".aparece"));
+		this._userArea = new UserAreaView($(".show"));
 
 		this._user = sessionStorage.getItem('users');
 

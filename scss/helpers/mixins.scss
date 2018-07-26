@@ -1,5 +1,5 @@
 //mixins///////
-@mixin prefixos($propertie, $value){
+@mixin prefixers($propertie, $value){
 	-moz-#{$propertie}: $value;
 	-webkit-#{$propertie}: $value;
 	-ms-#{$propertie}: $value;
