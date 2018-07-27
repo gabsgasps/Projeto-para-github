@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 
-//tasks sass
+//task sass
 gulp.task('sass', function(){
 
     gulp.src('scss/projeto.scss')
@@ -13,7 +13,7 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('css'))
 });
 
-//watch changes in the sass
+//task watch changes in the sass
 gulp.task('watch', function(){
 	gulp.watch('scss/**/*.scss', ['sass']);
 });
