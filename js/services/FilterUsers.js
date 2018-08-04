@@ -3,8 +3,9 @@ class FilterUsers{
 	constructor() {
 
 		this._searchUsers = new SearchUsers();
-		this._name = document.querySelector("#q");//campo do texto
+		this._name = document.querySelector("#q");//campOfText
 	}
+
 
 	importUsers() {
 
